@@ -3,8 +3,8 @@
     import '../app.css'
 </script>
 
-<div class="app">
-    <main>
+<div class="app h-full">
+    <main class="h-full">
         <slot/>
     </main>
 </div>
@@ -13,7 +13,6 @@
     .app {
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
         background: linear-gradient(to right, #2b5876, #4e4376);
     }
 
