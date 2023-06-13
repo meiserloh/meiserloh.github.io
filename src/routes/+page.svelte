@@ -6,7 +6,7 @@
   import Dev1 from "./Dev1.svelte";
   import Dev2 from "./Dev2.svelte";
   import Welcome from "./Welcome.svelte";
-  import { animXFactor, animYFactor } from "./store.js";
+  import { ANIM_DURATION, animXFactor, animYFactor } from "./store.js";
   import { swipe } from "svelte-gestures";
   import Contact from "./Contact.svelte";
 
@@ -33,7 +33,16 @@
     handleInputForSectionChange(direction);
   }
 
+  let isNextAnimReady = true;
+
   function handleInputForSectionChange(animDirectionTo) {
+    if (!isNextAnimReady) {
+      return;
+    }
+
+    isNextAnimReady = false;
+    setTimeout(() => isNextAnimReady = true, ANIM_DURATION);
+
     switch (animDirectionTo) {
       case "bottom":
         yIndex = Math.max(yIndex - 1, 0);
