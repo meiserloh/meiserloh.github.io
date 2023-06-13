@@ -1,6 +1,7 @@
 <script>
-import Card from "./Card.svelte";
+	import Card from './Card.svelte';
 </script>
+
 <Card>
-  <h2 class="text-xl text-center">Dev 1</h2>
+	<h2 class="text-center text-xl">Dev 1</h2>
 </Card>
