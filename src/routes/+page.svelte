@@ -70,8 +70,8 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Matthias Eiserloh</title>
+	<meta name="description" content="A website where I introduce myself" />
 </svelte:head>
 
 <section class="h-screen w-full">

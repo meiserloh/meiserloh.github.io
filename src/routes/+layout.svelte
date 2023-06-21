@@ -1,9 +1,16 @@
 <script>
-	import './styles.css';
+	// Your selected Skeleton theme:
+	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
+
+	// This contains the bulk of Skeletons required styles:
+	import '@skeletonlabs/skeleton/styles/skeleton.css';
+
+	// Finally, your application's global stylesheet (sometimes labeled 'app.css')
 	import '../app.css';
+	import './styles.css';
 </script>
 
-<div class="app h-full">
+<div class="app variant-gradient-primary-secondary h-full bg-gradient-to-br">
 	<main class="h-full">
 		<slot />
 	</main>
@@ -13,7 +20,6 @@
 	.app {
 		display: flex;
 		flex-direction: column;
-		background: linear-gradient(to right, #2b5876, #4e4376);
 	}
 
 	main {
